@@ -1,0 +1,2 @@
+le nuancier est assez inutile en l'état.
+Il faudrait pouvoir obtenir le code de la couleur lors du survol de la souris. 
