@@ -1,0 +1,28 @@
+body {
+    display: flex;
+    justify-content: flex-start;
+    width: 1200px; 
+}
+
+.nuancier {
+    width: 570px;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+
+#nuancierNoir {
+    background-color: black;
+
+}
+
+#nuancierBlanc {
+    background-color: white;
+    flex-direction: row-reverse;
+}
+
+.couleur {
+    border: 1px solid black;
+    border-radius: 10%;
+}
