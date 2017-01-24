@@ -6,17 +6,20 @@ var Nuancier = {
         this.parent = parent;
         var divParent = document.getElementById(this.parent);
         divParent.className = "nuancier";
-        for (var i = 0; i < 9; i++) {
+        for (var i = 1; i <= 10; i++) {
             var couleurAlpha = document.createElement("div");
             couleurAlpha.className = "couleur";
-            couleurAlpha.style.backgroundColor = "rgba(" + this.rouge + ", " + this.vert + ", " + this.bleu + ", 0." + i + 1 + ")";
-            divParent.appendChild(couleurAlpha);
+            couleurAlpha.style.backgroundColor = "rgba(" + this.rouge + ", " + this.vert + ", " + this.bleu + ", 0." + i ")";     
+            if (i === 10) {
+                couleurAlpha.style.backgroundColor = "rgba(" + this.rouge + ", " + this.vert + ", " + this.bleu + ", 1)";
+            }
+              divParent.appendChild(couleurAlpha);
      }
-        var couleur = document.createElement("div");
+      /*  var couleur = document.createElement("div");
         couleur.style.backgroundColor = "rgba(" + this.rouge + ", " + this.vert + ", " + this.bleu + ", 1)";
         couleur.className = "couleur";
         divParent.appendChild(couleur);
-    }
+   */ }
 };
 for (var b = 0; b <= 255; b += 51) {
     for (var g = 0; g <= 255; g += 51) {
