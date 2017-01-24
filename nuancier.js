@@ -14,7 +14,7 @@ var Nuancier = {
                 couleurAlpha.style.backgroundColor = "rgba(" + this.rouge + ", " + this.vert + ", " + this.bleu + ", 1)";
             }
               divParent.appendChild(couleurAlpha);
-              couleurAlpha.addEvenlistener("click", function() {
+              couleurAlpha.addEventListener("click", function() {
                 var couleurCellule = getComputedStyle(couleurAlpha).backgroundColor;
                 console.log(couleurCellule); 
               });
