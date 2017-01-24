@@ -9,17 +9,17 @@ var Nuancier = {
         for (var i = 1; i <= 10; i++) {
             var couleurAlpha = document.createElement("div");
             couleurAlpha.className = "couleur";
-            couleurAlpha.style.backgroundColor = "rgba(" + this.rouge + ", " + this.vert + ", " + this.bleu + ", 0." + i ")";     
+            couleurAlpha.style.backgroundColor = "rgba(" + this.rouge + ", " + this.vert + ", " + this.bleu + ", 0." + i + ")";     
             if (i === 10) {
                 couleurAlpha.style.backgroundColor = "rgba(" + this.rouge + ", " + this.vert + ", " + this.bleu + ", 1)";
             }
               divParent.appendChild(couleurAlpha);
-     }
-      /*  var couleur = document.createElement("div");
-        couleur.style.backgroundColor = "rgba(" + this.rouge + ", " + this.vert + ", " + this.bleu + ", 1)";
-        couleur.className = "couleur";
-        divParent.appendChild(couleur);
-   */ }
+              couleurAlpha.addEvenlistener("click", function() {
+                var couleurCellule = getComputedStyle(couleurAlpha).backgroundColor;
+                console.log(couleurCellule); 
+              });
+        }
+    }
 };
 for (var b = 0; b <= 255; b += 51) {
     for (var g = 0; g <= 255; g += 51) {
