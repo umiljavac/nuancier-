@@ -9,16 +9,16 @@ var Nuancier = {
         for (var i = 1; i <= 10; i++) {
             var couleurAlpha = document.createElement("div");
             couleurAlpha.className = "couleur";
+            couleurAlpha.addEventListener("click", function() {
+            var couleurCellule = getComputedStyle(couleurAlpha).backgroundColor;
+            console.log(couleurCellule); 
+            });
             couleurAlpha.style.backgroundColor = "rgba(" + this.rouge + ", " + this.vert + ", " + this.bleu + ", 0." + i + ")";     
             if (i === 10) {
                 couleurAlpha.style.backgroundColor = "rgba(" + this.rouge + ", " + this.vert + ", " + this.bleu + ", 1)";
             }
-              divParent.appendChild(couleurAlpha);
-              couleurAlpha.addEventListener("click", function() {
-                var couleurCellule = getComputedStyle(couleurAlpha).backgroundColor;
-                console.log(couleurCellule); 
-              });
-        }
+             divParent.appendChild(couleurAlpha);
+        } 
     }
 };
 for (var b = 0; b <= 255; b += 51) {
