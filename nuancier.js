@@ -12,8 +12,8 @@ var Nuancier = {
             couleurAlpha.className = "couleur";           
             couleurAlpha.style.backgroundColor = "rgba(" + this.rouge + ", " + this.vert + ", " + this.bleu + ", " + this.alpha + ")";     
             couleurAlpha.addEventListener("click", function() {
-            var couleurCellule = getComputedStyle(couleurAlpha).backgroundColor;
-            console.log(couleurCellule); 
+            var couleurCellule = getComputedStyle(couleurAlpha).backgroundColor;                     
+     	    console.log(couleurCellule);   		
             });
             divParent.appendChild(couleurAlpha);
         } 
